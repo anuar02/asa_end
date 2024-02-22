@@ -1,0 +1,103 @@
+/* App container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Input container */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-right: 10px;
+}
+
+/* Button container */
+.button-container {
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Map controls */
+.navigation-control,
+.geolocate-control {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.navigation-control button,
+.geolocate-control button {
+  background-color: #fff;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-control button:hover,
+.geolocate-control button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Map container */
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Marker */
+.marker {
+  position: absolute;
+  transform: translate(-50%, -100%);
+}
+
+.marker img {
+  width: 24px;
+  height: 24px;
+}
+
+.marker {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  transition: transform 1s linear;
+}
+
+.marker.move {
+  animation: moveMarker 3s linear infinite;
+}
+
+@keyframes moveMarker {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
