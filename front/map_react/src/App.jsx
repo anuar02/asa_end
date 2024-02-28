@@ -71,6 +71,7 @@ function App() {
 
   const postStartFinishPoints = () => {
     const numberOfPoints = 20;
+    console.log('gh')
 
     fetch('http://localhost:3000/route', {
       method: 'POST',
